@@ -65,8 +65,7 @@ class Solution {
         // is valid overlap
         bool validOverlap = (LX <= RX) && (LY >= RY);
         
-        return validOverlap;
-        
+        return validOverlap;      
         
     }
 };
