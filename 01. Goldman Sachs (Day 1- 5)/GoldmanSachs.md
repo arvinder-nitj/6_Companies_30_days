@@ -40,7 +40,8 @@ class Solution {
         /*
             solution is 2 stage
             1. find overlap. 
-            2. This will be done in a way which is independent of orientation of rectangles. It might be valid overlap or invalid overlap
+               This will be done in a way which is independent of orientation of rectangles. 
+	       It might be valid overlap or invalid overlap
             2. Check if overlap obtained is valid or not 
             
             Question: overlap area > 0 OR overlap area >=0
@@ -48,7 +49,7 @@ class Solution {
             Turns out common area (overlap area) = 0 is also comnsidered overlap, 
             i.e. tringles if touch each other are also overlapping
         
-            How?
+            How to find overlap?
             L1, L2 => x max and y min => L of overlap
             R1 and R2 => x min and y max => R of verlap
             
