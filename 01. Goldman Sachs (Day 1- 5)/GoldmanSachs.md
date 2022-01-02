@@ -83,15 +83,16 @@ class Solution{
         int start           =   0;
         int end             =  -1;
         
-        // range => [start, end]
+        // range at any instant => [start, end]
+	// start == end+1 means empty range
         
         while(end<n-1){
             end++;
             product *= a[end];
             while(product >= k and start <= end){
                 //caution: start<=end is necessay
-                // if k = 1, and array 11111111
-                // then product >= 1 will keep moving start giving misleading range
+                // if k = 1, and array 1 1 1 1 1 1 1 1
+                // then product >= 1 will keep moving start, giving misleading range
                 product/=a[start];
                 start++;
             }
