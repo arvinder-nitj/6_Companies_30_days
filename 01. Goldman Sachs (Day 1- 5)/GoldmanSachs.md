@@ -129,7 +129,6 @@ string encode(string src)
 ```
 
 ### 05. [Ugly Numbers](https://practice.geeksforgeeks.org/problems/ugly-numbers2254/1/)
-
 ```cpp
 
 ```
