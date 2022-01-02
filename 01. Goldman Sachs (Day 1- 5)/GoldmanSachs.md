@@ -1,14 +1,6 @@
-### 1. Print Anagrams Together
+### 01. [Print Anagrams Together](https://practice.geeksforgeeks.org/problems/print-anagrams-together/1/)
 
 ```cpp
-/*
-LINK : ```https://practice.geeksforgeeks.org/problems/print-anagrams-together/1/
-
-```
-
-Leetcode :  https://leetcode.com/problems/group-anagrams
-*/
-
 class Solution{
   public:
     vector<vector<string> > Anagrams(vector<string>& input) {
