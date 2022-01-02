@@ -104,10 +104,28 @@ class Solution{
 
 ```
 
-### 0. []()
+### 04. [Run Length Encoding](https://practice.geeksforgeeks.org/problems/run-length-encoding/1/#)
 
 ```cpp
-
+string encode(string src)
+{   
+    string ans = "";
+    int n = src.size();
+    
+    for(int i=0;i<n;){
+        char cur = src[i];
+        
+        int cnt = 1;
+        while(i+cnt < n and src[i+cnt] == cur) cnt++;
+        
+        ans.push_back(cur);
+        string num = to_string(cnt);
+        for(char i:num) ans.push_back(i);
+        
+        i+=cnt;
+    }
+    return ans;
+}
 ```
 
 ### 01. []()
