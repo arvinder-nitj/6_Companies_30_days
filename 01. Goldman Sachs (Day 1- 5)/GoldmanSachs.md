@@ -71,9 +71,35 @@ class Solution {
 };
 ```
 
-### 03. [](https://www.google.com/url?q=https://practice.geeksforgeeks.org/problems/count-the-subarrays-having-product-less-than-k1708/1/&sa=D&source=editors&ust=1641105459192000&usg=AOvVaw152KnN4nzDB7haoLtXoH_6)
+### 03. [Count the subarrays having product less than k ](https://practice.geeksforgeeks.org/problems/count-the-subarrays-having-product-less-than-k1708/1/#)
 
 ```cpp
+class Solution{
+  public:
+    int countSubArrayProductLessThanK(const vector<int>& a, int n, long long k) {
+        
+        long long count     =   0;
+        long long product   =   1;
+        int start           =   0;
+        int end             =  -1;
+        
+        // range => [start, end]
+        
+        while(end<n-1){
+            end++;
+            product *= a[end];
+            while(product >= k and start <= end){
+                //caution: start<=end is necessay
+                // if k = 1, and array 11111111
+                // then product >= 1 will keep moving start giving misleading range
+                product/=a[start];
+                start++;
+            }
+            count += (end-start+1);
+        }
+        
+        return count;
+    }
 
 ```
 
